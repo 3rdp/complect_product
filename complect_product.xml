@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7.0" type="plugin" method="upgrade" group="jshoppingproducts"> 
+	<name>JoomShopping Complect product site</name>
+	<creationDate>25.06.2012</creationDate>
+	<version>1.0.0</version>
+	<author>MAXXmarketing</author>
+	<authorEmail>support@webdesigner-profi.de</authorEmail>
+	<authorUrl></authorUrl>
+	<copyright>MAXXmarketing GmbH</copyright>
+	<license>MAXXmarketing</license>
+	<description></description>
+	<files>
+		<filename plugin="complect_product">complect_product.php</filename>
+	</files>
+</extension>
