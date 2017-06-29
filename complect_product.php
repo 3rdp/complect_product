@@ -37,14 +37,15 @@ class plgJshoppingProductsComplect_product extends JPlugin
 
         $dump_main_product = 0;
         if ($dump_main_product) var_dump($main_product);
-        $main_product[0]->product_price = '21000.0000';
+        // $main_product[0]->product_price = '27737.0000';
         $main_product = listProductUpdateData($main_product, 1); 
         if ($dump_main_product) var_dump($main_product);
-        // product_price_wp
-        // product_price
-        //
-        // min_price
         $main_product =  $main_product[0]; 
+
+        JPluginHelper::importPlugin("jshoppingproducts", "multidomen_price");
+        $dispatcher = JDispatcher::getInstance();
+        $dispatcher->trigger('onComplectProduct', array(&$main_product));
+        if ($dump_main_product) var_dump($main_product);
          
         foreach ($product_complect as $key => $value) {
             $product_complect[$key]->product_old_price = $product_complect[$key]->product_price;
