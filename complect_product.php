@@ -46,6 +46,8 @@ class plgJshoppingProductsComplect_product extends JPlugin
         $dispatcher = JDispatcher::getInstance();
         $dispatcher->trigger('onComplectProduct', array(&$main_product));
         if ($dump_main_product) var_dump($main_product);
+        // var_dump($product_complect);
+        $dispatcher->trigger('onBeforeDisplayProductList', array(&$product_complect));
          
         foreach ($product_complect as $key => $value) {
             $product_complect[$key]->product_old_price = $product_complect[$key]->product_price;
